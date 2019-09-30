@@ -16,44 +16,16 @@ RUN apt-get install -y python3-certbot-dns-route53
 
 RUN apt-get -y install nodejs
 RUN apt-get -y install yarn
+RUN apt-get -y install curl
 
 RUN groupadd -g 1000 ubuntu && \
     useradd -r -ms /bin/bash -u 1000 -g ubuntu ubuntu
 USER ubuntu
 
-WORKDIR /app/node_modules/@nebulario/microservice-certificates
 ARG CACHEBUST=1
 RUN echo "CACHE $CACHEBUST"
 
-COPY --chown=ubuntu:ubuntu ./node_modules /app/node_modules
+COPY --chown=ubuntu:ubuntu ./node_modules /env/app/node_modules
 
 ENTRYPOINT ["node"]
-CMD ["dist/index.js"]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-#RUN sudo apt-get install -y letsencrypt
-#ARG CACHEBUST=1
-#RUN echo "CACHE $CACHEBUST"
-#FROM node:8.13.0-alpine
-#RUN mkdir -p /app
-#RUN chown -R node /app
-#USER node
-#WORKDIR /app/node_modules/@nebulario/microservice-certificates
-#ARG CACHEBUST=1
-#RUN echo "CACHE $CACHEBUST"
-#COPY --chown=node:node ./node_modules /app/node_modules
-#ENTRYPOINT ["node"]
-#CMD ["dist/index.js"]
-#...
+CMD ["/env/app/node_modules/@nebulario/microservice-certificates/dist/index.js"]
