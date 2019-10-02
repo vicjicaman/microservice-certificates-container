@@ -17,10 +17,10 @@
   dependencies:
     regenerator-runtime "^0.13.2"
 
-"@nebulario/microservice-certificates@1.70.1-ssl-job-prod":
-  version "1.70.1-ssl-job-prod"
-  resolved "https://registry.yarnpkg.com/@nebulario/microservice-certificates/-/microservice-certificates-1.70.1-ssl-job-prod.tgz#1184c1bb7754348ce37a311f1ead7c7913135ad1"
-  integrity sha512-jlX4ubaHpboCWU8R6RiDINzF/1hCC6Nc7P6ThxPXrbteKbB5r8YvfhySgqDTOHqGe1CQkO0IaZHD42fgq3t16Q==
+"@nebulario/microservice-certificates@1.70.0-master":
+  version "1.70.0-master"
+  resolved "https://registry.yarnpkg.com/@nebulario/microservice-certificates/-/microservice-certificates-1.70.0-master.tgz#b7dacb37c0171d5880c331c04a3798e1c3455625"
+  integrity sha512-7b8hRtme7B46VdAwSNxbsbhghBW+IZPySIA7rUxPyV31vOPnZL4GK7hr0hcV/oMn2pSCc7LtBToETFvyyAA4iQ==
   dependencies:
     "@babel/runtime" "^7.6.0"
     "@babel/runtime-corejs3" "^7.6.0"
