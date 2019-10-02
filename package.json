@@ -3,6 +3,6 @@
   "description": "",
   "license": "MIT",
   "dependencies": {
-    "@nebulario/microservice-certificates": "link:./../microservice-certificates"
+    "@nebulario/microservice-certificates": "1.70.1-ssl-job-prod"
   }
 }
