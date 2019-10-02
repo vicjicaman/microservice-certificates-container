@@ -1,0 +1,17 @@
+# dependencies
+**/node_modules
+node_modules/.yarn-integrity
+
+**/tmp
+# production
+**/dist
+**/runtime
+**/service
+**/__generated__
+**/logs
+
+# misc
+.env
+
+yarn-debug.log*
+yarn-error.log*
