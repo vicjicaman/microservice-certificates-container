@@ -3,6 +3,6 @@
   "description": "",
   "license": "MIT",
   "dependencies": {
-    "@nebulario/microservice-certificates": "1.70.0-master"
+    "@nebulario/microservice-certificates": "link:./../microservice-certificates"
   }
 }
