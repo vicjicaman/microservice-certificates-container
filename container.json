@@ -1,9 +1,9 @@
 {
   "name": "repoflow/microservice-certificates-container",
-  "version": "1.70.0-master",
+  "version": "1.70.0-ns-deploy-prod",
   "source": {
     "type": "npm",
     "fullname": "@nebulario/microservice-certificates",
-    "version": "1.70.0-master"
+    "version": "1.70.0-ns-deploy-prod"
   }
 }
