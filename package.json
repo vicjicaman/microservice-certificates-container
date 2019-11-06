@@ -1,8 +1,0 @@
-{
-  "name": "container",
-  "description": "",
-  "license": "MIT",
-  "dependencies": {
-    "@nebulario/microservice-certificates": "link:./../microservice-certificates"
-  }
-}
