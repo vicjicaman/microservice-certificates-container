@@ -20,12 +20,23 @@ RUN apt-get -y install curl
 
 RUN groupadd -g 1000 ubuntu && \
     useradd -r -ms /bin/bash -u 1000 -g ubuntu ubuntu
-USER ubuntu
 
 ARG CACHEBUST=1
 RUN echo "CACHE $CACHEBUST"
 
-COPY --chown=ubuntu:ubuntu ./node_modules /env/app/node_modules
+ENV LOG_ROOT=/var/log/app
+RUN mkdir -p ${LOG_ROOT}
+RUN chown -R ubuntu ${LOG_ROOT}
 
+ENV APP_ROOT=/env/app/dist
+ENV APP_HOME=${APP_ROOT}/node_modules/@nebulario/microservice-certificates
+RUN mkdir -p ${APP_HOME}
+RUN chown -R ubuntu ${APP_HOME}
+
+COPY --chown=ubuntu:ubuntu ./dist ${APP_ROOT}
+
+USER ubuntu
+
+WORKDIR ${APP_HOME}
 ENTRYPOINT ["node"]
-CMD ["/env/app/node_modules/@nebulario/microservice-certificates/dist/index.js"]
+CMD ["dist/index.js"]

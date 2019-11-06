@@ -1,10 +1,8 @@
-# dependencies
-**/node_modules
-node_modules/.yarn-integrity
 
 **/tmp
 # production
 **/dist
+**/source
 **/runtime
 **/service
 **/__generated__
